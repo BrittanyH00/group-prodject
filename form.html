@@ -1,76 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-		
-	<head>
-		<meta charset="UTF-8">
-		<title>Matching Paws | Adoption Registration Signup</title>
-		<link rel="stylesheet" href="style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-		<nav>
-			<ul> 
-				<li><a href="default.asp">Home</a></li>
-				<li><a href="AvailablePets.asp">Available Pets</a></li>
-				<li><a href="contact.asp">Contact</a></li>
-			</ul>
-		</nav>
-		
-<main>	
-	<form>
-        <fieldset>
-			<legend>Personal Informtion</legend>
-			<label for = "first_name" class = "blocky"> First Name:</label>
-			<input type = "text" name = "first_name" id = "first_name">
-			<label for = "last_name" class = "blocky"> Last Name:</label>
-			<input type = "text" name = "last_name" id = "last_name">
-			<label for = "email_address" class = "blocky"> Email:</label>
-			<input type = "email" name = "email_address" id = "email_address">
-			<label for = "phone_number" class = "blocky"> Phone Number:</label>
-			<input type = "text" name = "phone_number" id = "phone_number">
-			<label for = "street_address" class = "blocky"> Address:</label> 
-			<textarea name = "street_address" id = "street_address" rows = "3" cols = "25"> </textarea>	
-		</fieldset>
+<head>
+    <meta charset="UTF-8">
+    <title>Timless Tales bookstore | Order Search</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav>
+        <ul> 
+            <li><a href="index.php">Home</a></li>
+            <li><a href="books.php">Books</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>    
+        <form method="POST" action="query_orders.php">
+            <fieldset>
+                <legend>Search book Orders</legend>
+                
+                <label for="order_date" class="blocky">Order Date:</label>
+                <input type="date" name="order_date" id="order_date">
 
-		<fieldset>
-			<legend>Contact Preference</legend>
-			<input type = "radio" name = "contact" value = "email" id = "contact_email">
-			<label for = "contact_email"> Email</label>
-			<input type = "radio" name = "contact" value = "phone_number" id = "contact_phone">
-			<label for = "contact_phone"> Phone Number</label>
-		</fieldset>
-		
-		<fieldset>
-			<legend>Pet Interests</legend>
-			<input type = "checkbox" name = "pet" value = "dog" id = "dog">
-			<label for = "dog"> Dogs</label>
-			<input type = "checkbox" name = "pet" value = "cat" id = "cat">
-			<label for = "cat"> Cats</label>
-		</fieldset>
-		
-		<fieldset>
-			<label for = "referal"> Reason for Adopting?</label>
-			<select id = "referal">
-				<option>I am a animal lover</option>
-				<option>Looking for a service animal</option>
-				<option>Finding my "Matching Paw"</option>
-				<option>Looking for a pet for the kids</option>
-				<option>Saving an animal Life</option>
-				<option>Other</option>
-			</select>
-					<label for = "other" class = "blocky"> Specify Other:</label> 
-					<textarea name = "other" id = "other" rows = "7" cols = "100"></textarea>	
-		</fieldset>
-		
-			<input type = "submit" value = "Find Your Matching Paw Now">
-			<input type = "reset" value = "Clear Data Entered">
-	</form>
-		
-		
-</main>
-		<footer>
-			<p>Email Address: Kperezfarret@student.clayton.edu</p>
-			<p>Due Date: October 20th, 2024</p>
-		</footer>
-	</body>
+                <label for="customer_name" class="blocky">Customer Name:</label>
+                <input type="text" name="customer_name" id="customer_name">
+
+                <label for="book_title" class="blocky">Book Title:</label>
+                <input type="text" name="book_title" id="book_title">
+
+                <label for="order_status" class="blocky">Order Status:</label>
+                <select name="order_status" id="order_status">
+                    <option value="">-- Select Status --</option>
+                    <option value="pending">Pending</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="canceled">Canceled</option>
+                </select>
+            </fieldset>
+            
+            <input type="submit" value="Search Orders">
+            <input type="reset" value="Clear">
+        </form>
+    </main>
+
+    <footer>
+        <p>Timless Tales bookstore Contact: Timeless Tales @bookstore.com</p>
+        <p>&copy; 2025 BookTales Store Inc.</p>
+    </footer>
+</body>
 </html>
