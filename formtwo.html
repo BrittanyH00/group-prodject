@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeless Tales | Update Customer Info</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav>
+        <ul> 
+            <li><a href="index.php">Home</a></li>
+            <li><a href="books.php">Books</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="customers.php">Customers</a></li>
+        </ul>
+    </nav>
+    
+    <main>    
+        <form method="POST" action="update_customer.php">
+            <fieldset>
+                <legend>Update Customer Information</legend>
+
+                <label for="customer_id" class="blocky">Customer ID:</label>
+                <input type="text" name="customer_id" id="customer_id" required>
+
+                <label for="new_name" class="blocky">New Name:</label>
+                <input type="text" name="new_name" id="new_name">
+
+                <label for="new_email" class="blocky">New Email:</label>
+                <input type="email" name="new_email" id="new_email">
+
+                <label for="new_phone" class="blocky">New Phone Number:</label>
+                <input type="text" name="new_phone" id="new_phone">
+
+                <label for="new_address" class="blocky">New Address:</label>
+                <textarea name="new_address" id="new_address" rows="3" cols="25"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Update Customer">
+            <input type="reset" value="Clear">
+        </form>
+    </main>
+
+    <footer>
+        <p>Timeless Tales Bookstore | Contact: support@timelesstales.com</p>
+        <p>&copy; 2025 Timeless Tales Inc.</p>
+    </footer>
+</body>
+</html>
+
