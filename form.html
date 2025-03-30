@@ -8,33 +8,28 @@
 </head>
 <body>
     <nav>
-        <ul> 
-            <li><a href="home.html">Home</a></li>
-            <li><a href="books.php">Books</a></li>
-            <li><a href="form2.html">Orders</a></li>
-            <li><a href="form.html">Customers</a></li>
-        </ul>
+        
     </nav>
     
     <main>    
-        <form method="POST" action="update_customer.php">
+        <form method="POST" action="add new_customer.php">
             <fieldset>
-                <legend>Update Customer Information</legend>
+                <legend>Add New Customer </legend>
 
-                <label for="customer_id" class="index">Customer ID:</label>
+                <label for="customer_Firstname" class="index">Customer First name:</label>
                 <input type="text" name="customer_id" id="customer_id" required>
 
-                <label for="new_name" class="index">New Name:</label>
-                <input type="text" name="new_name" id="new_name">
+                <label for="email" class="index">Email:</label>
+                <input type="email" name="email" id="email">
 
-                <label for="new_email" class="index">New Email:</label>
-                <input type="email" name="new_email" id="new_email">
+                <label for="phoneNumber" class="index">Phone Number:</label>
+                <input type="text" name="phine_number" id="phone_number">
 
-                <label for="new_phone" class="index">New Phone Number:</label>
-                <input type="text" name="new_phone" id="new_phone">
-
-                <label for="new_address" class="index">New Address:</label>
+                <label for="address" class="index">Address:</label>
                 <textarea name="new_address" id="new_address" rows="3" cols="25"></textarea>
+
+                 <label for="Orderstaus" class="index">Order Status:</label>
+                <input type="text" name="orderstatus" id="oderstatus">
             </fieldset>
 
             <input type="submit" value="Update Customer">
@@ -44,7 +39,7 @@
 
     <footer>
        <p>Timless Tales bookstore Contact: Timeless Tales @bookstore.com</p>
-        <p>&copy; 2025 BookTales Store Inc.</p>
+        
     </footer>
 </body>
 </html>
