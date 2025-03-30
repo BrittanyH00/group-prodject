@@ -2,50 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Timeless Tales | Update Customer Info</title>
-    <link rel="stylesheet" href="Timlesstales.css">
+    <title>Timless Tales bookstore | Order Search</title>
+    <link rel="stylesheet" href="Style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <nav>
         <ul> 
-            <li><a href="index.php">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="books.php">Books</a></li>
-            <li><a href="orders.php">Orders</a></li>
-            <li><a href="customers.php">Customers</a></li>
+            <li><a href="form2.html">Orders</a></li>
+            <li><a href="form.html">Customers</a></li>
         </ul>
     </nav>
     
     <main>    
-        <form method="POST" action="update_customer.php">
+        <form method="POST" action="query_orders.php">
             <fieldset>
-                <legend>Update Customer Information</legend>
+                <legend>Search book Orders</legend>
+                
+                <label for="order_date" class="blocky">Order Date:</label>
+                <input type="date" name="order_date" id="order_date">
 
-                <label for="customer_id" class="index">Customer ID:</label>
-                <input type="text" name="customer_id" id="customer_id" required>
+                <label for="customer_name" class="blocky">Customer Name:</label>
+                <input type="text" name="customer_name" id="customer_name">
 
-                <label for="new_name" class="index">New Name:</label>
-                <input type="text" name="new_name" id="new_name">
+                <label for="book_title" class="blocky">Book Title:</label>
+                <input type="text" name="book_title" id="book_title">
 
-                <label for="new_email" class="index">New Email:</label>
-                <input type="email" name="new_email" id="new_email">
-
-                <label for="new_phone" class="index">New Phone Number:</label>
-                <input type="text" name="new_phone" id="new_phone">
-
-                <label for="new_address" class="index">New Address:</label>
-                <textarea name="new_address" id="new_address" rows="3" cols="25"></textarea>
+                <label for="order_status" class="blocky">Order Status:</label>
+                <select name="order_status" id="order_status">
+                    <option value="">-- Select Status --</option>
+                    <option value="pending">Pending</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="canceled">Canceled</option>
+                </select>
             </fieldset>
-
-            <input type="submit" value="Update Customer">
+            
+            <input type="submit" value="Search Orders">
             <input type="reset" value="Clear">
         </form>
     </main>
 
     <footer>
-       <p>Timless Tales bookstore Contact: Timeless Tales @bookstore.com</p>
+        <p>Timless Tales bookstore Contact: Timeless Tales @bookstore.com</p>
         <p>&copy; 2025 BookTales Store Inc.</p>
     </footer>
 </body>
 </html>
-
