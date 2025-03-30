@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Timless Tales bookstore | Order Search</title>
-    <link rel="stylesheet" href="Style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Update Record - Timeless Tales Bookstore</title>
+  <style>
+    body {
+     
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        
-    </nav>
-    
-    <main>    
-        <form method="POST" action="query_orders.php">
-            <fieldset>
-                <legend>Add New customer</legend>
-                
-                <label for="firstname" class="blocky">First name:</label>
-                <input type="Firstname" name="First_name" id="First_name">
+  <header>
+    <h1>Update Customer Record</h1>
+  </header>
 
-                <label for="Lastname" class="blocky">Last Name:</label>
-                <input type="text" name="customer_name" id="customer_name">
+  <main>
+    <form action="#" method="post">
+      <h3>Update Customer Information:</h3>
 
-                <label for="phone_number" class="blocky">phone number:</label>
-                <input type="text" name="phone_number" id="phone_number">
-                
-                    <label for="adress" class="blocky">Address:</label>
-                <input type="text" name="adress" id="adress">
+      <label for="current-email">Current Email Address:</label>
+      <input type="email" id="current-email" name="current_email">
 
-                <label for="order_status" class="blocky">Order Status:</label>
-                <select name="order_status" id="order_status">
-                    <option value="">-- Select Status --</option>
-                    <option value="pending">Pending</option>
-                    <option value="shipped">Shipped</option>
-                    <option value="delivered">Delivered</option>
-                    <option value="canceled">Canceled</option>
-                </select>
-            </fieldset>
-            
-            <input type="submit" value="Search Orders">
-            <input type="reset" value="Clear">
-        </form>
-    </main>
+      <label for="current-first-name">Current First Name:</label>
+      <input type="text" id="current-first-name" name="current_first_name">
 
-    <footer>
-        <p>Timless Tales bookstore Contact: Timeless Tales @bookstore.com</p>
-    </footer>
+      <label for="current-last-name">Current Last Name:</label>
+      <input type="text" id="current-last-name" name="current_last_name">
+
+      <h3>Update Information:</h3>
+
+      <label for="column-name">Select Field to Update:</label>
+      <select id="column-name" name="column_name" required>
+        <option value="" disabled selected>-- Select an option --</option>
+        <option value="customer_first_name">First Name</option>
+        <option value="customer_last_name">Last Name</option>
+        <option value="customer_email">Email Address</option>
+        <option value="customer_phone">Phone Number</option>
+        <option value="customer_address">Address</option>
+      </select>
+
+      <label for="new-value">New Value:</label>
+      <input type="text" id="new-value" name="new_value" required>
+
+      <input type="submit" value="Update Record">
+    </form>
+  </main>
+
+  <footer>
+    <p><a href="forms.html">← Back to Forms</a></p>
+  </footer>
 </body>
 </html>
